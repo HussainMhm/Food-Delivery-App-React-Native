@@ -98,7 +98,7 @@ function Cart(props) {
                 <View>
                     <TouchableOpacity
                         style={{ backgroundColor: themeColors.bgColor(1) }}
-                        onPress={() => navigation.navigate("PreparingOrder")}
+                        onPress={() => navigation.navigate("OrderPreparing")}
                         className="p-3 rounded-full"
                     >
                         <Text className="text-white text-center font-bold text-lg">
