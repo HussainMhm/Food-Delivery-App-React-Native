@@ -38,22 +38,23 @@ function Home(props) {
                     paddingBottom: 20,
                 }}
             >
+                {/* Food Categories */}
                 <Categories />
-            </ScrollView>
 
-            {/* Featured */}
-            <View className="mt-5">
-                {[featured, featured, featured].map((item, index) => {
-                    return (
-                        <FeaturedRow
-                            key={index}
-                            title={item.title}
-                            restaurants={item.restaurants}
-                            description={item.description}
-                        />
-                    );
-                })}
-            </View>
+                {/* Featured */}
+                <View className="mt-5">
+                    {[featured, featured, featured].map((item, index) => {
+                        return (
+                            <FeaturedRow
+                                key={index}
+                                title={item.title}
+                                restaurants={item.restaurants}
+                                description={item.description}
+                            />
+                        );
+                    })}
+                </View>
+            </ScrollView>
         </SafeAreaView>
     );
 }
