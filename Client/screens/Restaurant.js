@@ -5,9 +5,19 @@ import { themeColors } from "../theme";
 import DishRow from "../components/DishRow";
 import CartIcon from "../components/CartIcon";
 import { StatusBar } from "expo-status-bar";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { setRestaurant } from "../slices/restaurantSlice";
 
 function Restaurant({ route, navigation }) {
     const item = route.params;
+
+    const dispatch = useDispatch();
+    useEffect(() => {
+        if (item && item.id) {
+            dispatch(setRestaurant({ ...item }));
+        }
+    }, []);
 
     return (
         <View>
